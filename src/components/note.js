@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import Textarea from 'react-textarea-autosize';
-import FontAwesome from 'react-fontawesome';
-
 
 class Note extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      title: 'my note',
+      title: 'testing all of the noteszz woot woot woot',
+      text: 'I is a note',
+      x: 400,
+      y: 12,
+      zIndex: 26,
     };
   }
 
@@ -16,21 +18,16 @@ class Note extends Component {
     return (
       <div id="note">
         <div id="note-header">
-          <div>
-            <h1>My Note</h1>
+          <div id="note-title">
+            <h1>{this.state.title}</h1>
           </div>
-          <div>
-          <FontAwesome
-            className="super-crazy-colors"
-            name="rocket"
-            size="2x"
-            spin
-            style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
-          />
+          <div id="icons">
+            <i className="fa fa-pencil" aria-hidden="true"></i>
+            <i className="fa fa-times" aria-hidden="true"></i>
           </div>
         </div>
-        <div>
-          <Textarea />
+        <div id="note-area">
+          <Textarea minRows={3} />
         </div>
       </div>
     );

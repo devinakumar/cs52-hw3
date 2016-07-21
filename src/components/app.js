@@ -6,10 +6,6 @@ import Note from './note';
 
 import Immutable from 'immutable';
 
-import Draggable from 'react-draggable';
-
-import Textarea from 'react-textarea-autosize';
-
 // example class based component (smart component)
 class App extends Component {
   constructor(props) {
