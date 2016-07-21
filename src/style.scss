@@ -4,3 +4,28 @@ body {
   background: darken(white, 10%);
   margin: 50px;
 }
+
+#text-bar {
+  margin-bottom: 20px;
+
+  input {
+    font-size: 1.5em;
+    border-radius: .25em;
+  }
+}
+
+#note {
+  background: white;
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#note-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 
-import Welcome from './welcome';
+import TextInputBar from './textinputbar';
+
+import Note from './note';
+
+import Immutable from 'immutable';
+
+import Draggable from 'react-draggable';
+
+import Textarea from 'react-textarea-autosize';
 
 // example class based component (smart component)
 class App extends Component {
@@ -8,13 +16,21 @@ class App extends Component {
     super(props);
 
     // init component state here
-    this.state = {};
+    this.state = {
+      notes: Immutable.Map(),
+    };
   }
+
+  createNote(title) {
+    console.log(title);
+  }
+
 
   render() {
     return (
       <div>
-        <Welcome />
+        <TextInputBar onSubmit={(title) => { this.createNote(title); }} />
+        <Note />
       </div>
     );
   }
