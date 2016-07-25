@@ -16,10 +16,10 @@ class Note extends Component {
     this.onDrag = this.onDrag.bind(this);
   }
   onNoteUpdate(event) {
-    this.props.onUpdate(this.props.note.title, { text: event.target.value });
+    this.props.onUpdate(this.props.id, { text: event.target.value });
   }
   onDeleteClick(event) {
-    this.props.onDelete(this.props.note.title);
+    this.props.onDelete(this.props.id);
   }
   onUpdateClick(event) {
     if (this.state.editing) {
